@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<map name="test02">
+	<destructableMap>test02_destr</destructableMap>
+	<indestructableMap>test02_indestr</indestructableMap>	
+</map>

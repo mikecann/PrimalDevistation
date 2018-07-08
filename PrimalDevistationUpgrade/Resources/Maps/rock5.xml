@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<map name="rock5">
+	<destructableMap>rock5_destr</destructableMap>
+	<indestructableMap>rock5_indestr</indestructableMap>	
+	<background>rock_bg2</background>
+	<destrMask>rock5_mask</destrMask>
+</map>

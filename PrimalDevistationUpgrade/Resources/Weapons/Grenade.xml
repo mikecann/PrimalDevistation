@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<weapon name="grenade" type="grenade">
+	<properties>
+		<texture>grenade2</texture>
+		<friction>0.4</friction>
+		<maxAmmo>5</maxAmmo>
+		<reloadTime>5000</reloadTime>
+		<rateOfFire>250</rateOfFire>
+	</properties>
+
+	<events>	
+		<onAge equals="4000">
+			<spawn type="explosion" size="128"  where="this" velocity="this" />
+			<spawn type="shrapnel" quantity="10"  where="this" velocity="this" />
+			<die/>
+		</onAge>
+	</events>
+</weapon>

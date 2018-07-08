@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<weapon name="grapple" type="grapple">
+	<properties>
+		<texture>grappling-hook-open</texture>
+		<friction>1</friction>
+		<ropeTexture>rope</ropeTexture>
+		<maxAmmo>99</maxAmmo>
+		<reloadTime>10</reloadTime>
+		<rateOfFire>1</rateOfFire>
+	</properties>
+
+	<events>		
+	</events>
+</weapon>

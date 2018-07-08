@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<weapon name="vortex" type="vortex">
+	<properties>
+		<texture>gravity-bomb</texture>
+		<friction>1</friction>
+		<strength>0.1</strength>
+		<reach>300</reach>
+		<airResistance>0.95</airResistance>
+		<maxAmmo>3</maxAmmo>
+		<reloadTime>10000</reloadTime>
+		<rateOfFire>1000</rateOfFire>
+	</properties>
+
+	<events>
+		<onAge equals="5000">
+			<spawn type="explosion" size="128"  where="this" velocity="this" />
+			<die/>
+		</onAge>
+	</events>
+</weapon>

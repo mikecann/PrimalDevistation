@@ -1,0 +1,445 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{bef4a5dc-3aed-477f-b47b-aebb15eac449}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrimalDevistation</RootNamespace>
+    <AssemblyName>RampantRollers</AssemblyName>
+    <XnaFrameworkVersion>v3.0</XnaFrameworkVersion>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>.</ContentRootDirectory>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Resources\ExplosionMasks\explosion32.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>explosion32</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\worm_bigger.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>worm_bigger</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\ParticleUpdateMRT.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>ParticleUpdateMRT</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\PointSpriteRenderVT.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>PointSpriteRenderVT</Name>
+    </Compile>
+    <Compile Include="Resources\ExplosionMasks\explosion64.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>explosion64</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particle.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>particle</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particle2x2.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>particle2x2</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Other\ConsoleFont.spritefont">
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Name>ConsoleFont</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\Line.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>Line</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\PointSpriteRender.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>PointSpriteRender</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particle5x5.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>particle5x5</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\smoke.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>smoke</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\crate.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>crate</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\grenade.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>grenade</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\rocket.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rocket</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\smoke.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>smoke</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\GaussianBlur.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>GaussianBlur</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\ExplosionRender.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>ExplosionRender</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\SpriteBatch.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>SpriteBatch</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\ExplosionMasks\explosion128.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>explosion128</Name>
+    </Compile>
+    <Compile Include="Resources\Other\2x2.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>2x2</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\crosshair.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>crosshair</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\rope.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rope</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\grapple.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>grapple</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\ParticleUpdate.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>ParticleUpdate</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\TerrainRender.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>TerrainRender</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\PointSpriteRender360.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>PointSpriteRender360</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Shaders\ParticleUpdate360.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>ParticleUpdate360</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Maps\tempMask01.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>tempMask01</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\PostProcess\BloomCombine.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>BloomCombine</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\PostProcess\BloomExtract.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>BloomExtract</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\PostProcess\GaussianBlur.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>GaussianBlur</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\bullet01.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>bullet01</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Audio\audio.xap">
+      <Importer>XactImporter</Importer>
+      <Processor>XactProcessor</Processor>
+      <Name>audio</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\bazooka.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>bazooka</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\grappling-hook-open.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>grappling-hook-open</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\gravity-bomb.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>gravity-bomb</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\machine-gun-bullet.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>machine-gun-bullet</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="icon.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>icon</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\blankMask.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>blankMask</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\rock5_destr.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rock5_destr</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\rock5_indestr.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rock5_indestr</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\rock5_mask.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rock5_mask</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\rock_bg.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rock_bg</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\rock_bg2.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rock_bg2</Name>
+    </Compile>
+    <Compile Include="Resources\Maps\rock_indestr.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>rock_indestr</Name>
+    </Compile>
+    <Compile Include="Resources\Shaders\PostProcess\Warp.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>Warp</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\blue.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>blue</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\blue_t.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>blue_t</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\brown.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>brown</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\brown_t.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>brown_t</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\bubble.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>bubble</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\flash128.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>flash128</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\flash32.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>flash32</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\flash64.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>flash64</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\green.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>green</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\green_t.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>green_t</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\orange.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>orange</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\orange_t.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>orange_t</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part01.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part01</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part02.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part02</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part03.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part03</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part04.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part04</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part05.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part05</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part06.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part06</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part07.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part07</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part08.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part08</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part09.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part09</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\particles\part10.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>part10</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\red.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>red</Name>
+    </Compile>
+    <Compile Include="Resources\Sprites\red_t.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>red_t</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\grenade2.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>grenade2</Name>
+    </Compile>
+    <Compile Include="Resources\Weapons\machine-gun-bullet2.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>machine-gun-bullet2</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v3.0\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+</Project>

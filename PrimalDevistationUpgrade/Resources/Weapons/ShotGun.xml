@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<weapon name="ShotGun" type="projectile">
+	<properties>
+		<texture>machine-gun-bullet</texture>
+		<maxAmmo>5</maxAmmo>
+		<reloadTime>5000</reloadTime>
+		<rateOfFire>800</rateOfFire>
+		<launchPower>2</launchPower>
+		<numToFire>20</numToFire>
+		<fireRangeAngle>0.2</fireRangeAngle>
+	</properties>
+
+	<events>
+		<onTerrainCollide>
+			<spawn type="explosion" size="32"  where="this" velocity="this" />
+			<spawn type="shrapnel" quantity="1"  where="this" velocity="this" />
+			<die/>
+		</onTerrainCollide>
+	</events>
+</weapon>

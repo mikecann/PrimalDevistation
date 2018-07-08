@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<map name="rock3">
+	<destructableMap>rock3_destr</destructableMap>
+	<background>rock_bg</background>
+	<destrMask>blankMask</destrMask>
+</map>
