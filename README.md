@@ -3,3 +3,5 @@
 # Primal Devistation
 
 An old and retired XNA project from many years ago
+
+More on my blog: https://mikecann.co.uk/lieroxna/lieroxna-digging-up-the-past/
